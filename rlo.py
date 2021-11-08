@@ -46,7 +46,6 @@ if __name__ == "__main__":
     text: str
     prog_name: str
 
-    text: str
     # get data from a pipe if it exists
     if not os.isatty(0):
         text = sys.stdin.read()
