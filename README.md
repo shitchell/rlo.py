@@ -60,16 +60,18 @@ this trick can be used to bypass text filters and make malicious urls look real.
 
 ### malicious urls
 
-if a user wants you to visit a malicious site, they can:
+if an attacker wants you to visit a malicious site, they can:
+
 1. append the reversed version of a legitimate url to their malicious url
 2. reverse the entire url
 
-when reversed, the legimiate domain will *appear* in front and as if the user is
-clicking on a safe, trusted domain. example:
+when reversed, the legitimate domain will *appear* in front and as if the user
+is clicking on a safe, trusted domain. example:
 
-i want you to visit [https://malicious.com/virus.exe](#). i can reverse the much
-more legitimate [google.com/](#) which gives me: */moc.elgoog*.
-next i'll append this reversed domain on the end of my malicious url:
+i want you to visit [https://malicious.com/virus.exe](#). i can manually reverse
+(without the RLO character) the characters in [google.com/](#) which gives me:
+*/moc.elgoog*. next i'll append this reversed domain on the end of my malicious
+url:
 [https://malicious.com/virus.exe#/moc.elgoog](#)
 
 web browsers will ignore anything after a `#`, so adding this doesn't affect
@@ -81,7 +83,8 @@ my malicious url. lastly, i'll reverse everything in the brackets:
 if i shorten my malicious url using a service like bit.ly, it looks even more
 legitimate:
 
-[https://{bit.ly/8s2Kjf3#/moc.elgoog}](#) -> [https://‮bit.ly/8s2Kjf3#/moc.elgoog‬](#)
+[https://{bit.ly/8s2Kjf3#/moc.elgoog}](#) -> 
+[https://‮bit.ly/8s2Kjf3#/moc.elgoog‬](#)
 
 ### bypassing text filters
 
