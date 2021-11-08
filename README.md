@@ -48,9 +48,9 @@ some text, all of the text that follows will be reversed:
 
 `let's reverse \u202Esome text` -> let's reverse ‮some text asdf
 
-we can force only a certain subsection of the text to be reversed by adding a
-Pop Directional Formatting (PDF) unicode character `U+202C` after the text we
-want to be reversed:
+we can reverse only a certain subsection of the text by adding a stopping
+character `U+202C` that marks where the text should stop displaying 
+right-to-left:
 
 `let's \u202Ereverse\u202C some text` -> let's ‮reverse‬ some text
 
