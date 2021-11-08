@@ -51,7 +51,9 @@ if __name__ == "__main__":
     if not os.isatty(0):
         text = sys.stdin.read()
     else:
-        text = " ".join(sys.argv[1:])
+        # piped input will have a newline most of the time,
+        # so add a newline to text pass as arguments as well
+        text = " ".join(sys.argv[1:]) + "\n"
 
     # print help message if no text provided
     if not text:
@@ -64,5 +66,5 @@ if __name__ == "__main__":
         print(f"$ {prog_name}" + " hello {world}")
         sys.exit(1)
     
-    print(insert_markers(text))
+    print(insert_markers(text), end="")
     
