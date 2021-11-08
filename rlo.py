@@ -35,7 +35,9 @@ def insert_markers(
           character before the RLO character (i.e. a zero-width space
           will not suffice, and the text will still print left-to-right)
     """
-    return re.sub("{(.*?)}", f"{rtl}\\1{end}", text)
+    m1: str = markers[0]
+    m2: str = markers[1]
+    return re.sub(f"{m1}(.*?){m2}", f"{rtl}\\1{end}", text)
 
 if __name__ == "__main__":
     import re
